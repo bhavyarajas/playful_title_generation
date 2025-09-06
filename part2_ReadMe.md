@@ -28,10 +28,10 @@
 ## How to Make it Better
 
 There are other ways I could improve the fine-tuning if I had more time and compute:
-	•	Use stronger inputs: instead of only the abstract, I could also feed in other available columns such as the ChatGPT summary (or even concatenate abstract + conclusion). This gives the model more context to generate precise and stylistically appropriate titles.
-	•	Train longer: increasing the number of epochs would let the model converge better. I limited training for time/compute, but with more passes over the data, the model would likely produce more consistent titles.
-	•	Bigger effective batch size: on my laptop I had to keep batch size very small. With more memory (or gradient accumulation tuned properly), I could scale up batch size, which usually stabilizes training.
-	•	Hyperparameter tuning: experiment with learning rate schedules, dropout rates, and weight decay to prevent over/underfitting.
-	•	Try other models:
-	•	    Flan-T5-small or Flan-T5-base: already tuned for instruction-following, so they might learn title style faster.
-	•	    BART-base: another strong seq2seq model, well-suited for summarization.
+- Use stronger inputs: instead of only the abstract, I could also feed in other available columns such as the ChatGPT summary (or even concatenate abstract + conclusion). This gives the model more context to generate precise and stylistically appropriate titles.
+- Train longer: increasing the number of epochs would let the model converge better. I limited training for time/compute, but with more passes over the data, the model would likely produce more consistent titles.
+- Bigger effective batch size: on my laptop I had to keep batch size very small. With more memory (or gradient accumulation tuned properly), I could scale up batch size, which usually stabilizes training.
+- 	Hyperparameter tuning: experiment with learning rate schedules, dropout rates, and weight decay to prevent over/underfitting.
+- 	Try other models:
+- 		lan-T5-small or Flan-T5-base: already tuned for instruction-following, so they might learn title style faster.
+- 		RT-base: another strong seq2seq model, well-suited for summarization.
