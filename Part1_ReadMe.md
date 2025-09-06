@@ -33,10 +33,10 @@ I also create the option of choosing between:
 ## How to Make it Better
 
 There are a number of straightforward (and some creative) ways I could improve this classification if I had more time and resources:
-	•	Quantitative evaluation of K-Means vs. threshold: Right now, I offered both options without choosing one. With a small labeled validation set, I could compare the two using F1 scores and ROC/AUC analysis. This would tell me which method separates playful vs. boring titles better.
-	•	Creating other signals: Your examples showed the use of font size, bolding, or underlining in titles. Incorporating these as additional features could capture more playfulness cues.
-	•	Better punctuation analysis: Instead of just counting punctuation, I could actually test how much punctuation correlates with humor in the dataset. For example, is ? or repeated dashes strongly predictive? If not, weights could be adjusted (or even learned) instead of assigned heuristically.
-	•	Model ensemble (SciBERT + RoBERTa): Currently I only used SciBERT for “scientific alignment.” Pairing it with a general language model like RoBERTa would let me measure the difference between “scientific" and “general” tokenization. That gap could be a stronger indicator of playfulness.
+- Quantitative evaluation of K-Means vs. threshold: Right now, I offered both options without choosing one. With a small labeled validation set, I could compare the two using F1 scores and ROC/AUC analysis. This would tell me which method separates playful vs. boring titles better.
+- Creating other signals: Your examples showed the use of font size, bolding, or underlining in titles. Incorporating these as additional features could capture more playfulness cues.
+- Better punctuation analysis: Instead of just counting punctuation, I could actually test how much punctuation correlates with humor in the dataset. For example, is ? or repeated dashes strongly predictive? If not, weights could be adjusted (or even learned) instead of assigned heuristically.
+- Model ensemble (SciBERT + RoBERTa): Currently I only used SciBERT for “scientific alignment.” Pairing it with a general language model like RoBERTa would let me measure the difference between “scientific" and “general” tokenization. That gap could be a stronger indicator of playfulness.
 
 
 Note: Due to time and compute limits, I kept the classification simple and only ran on the first 1,000 rows. With more time, I would incorporate richer features, run proper evaluation metrics, and test SciBERT + RoBERTa together for more robust results.
